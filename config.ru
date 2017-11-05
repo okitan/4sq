@@ -1,8 +1,6 @@
 require "sinatra"
 require "omniauth-foursquare"
 
-require "pry"
-
 class MyApp < ::Sinatra::Base
   configure do
     set :sessions, true
