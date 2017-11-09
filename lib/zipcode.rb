@@ -72,21 +72,8 @@ module Zipcode
   end
 
   def dictionary
-    @dictionary ||= YAML.load_file("KEN_ALL.rev.yaml")
+    @dictionary ||= YAML.load_file("data/KEN_ALL.rev.yaml")
   end
 
   module_function *instance_methods
-end
-
-if $0 == __FILE__
-  require "thor"
-
-  class ZipCLI < Thor
-    desc "search", ""
-    def search(address)
-      puts Zipcode.search(address)
-    end
-  end
-
-  ZipCLI.start
 end

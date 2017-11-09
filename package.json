@@ -1,0 +1,24 @@
+{
+  "name": "4sq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okitan/4sq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okitan/4sq/issues"
+  },
+  "homepage": "https://github.com/okitan/4sq#readme",
+  "private": true,
+  "dependencies": {
+    "ltsv": "^0.7.5",
+    "puppeteer": "^0.12.0"
+  }
+}

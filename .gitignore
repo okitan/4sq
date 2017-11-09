@@ -1,2 +1,5 @@
 secret.sh
 KEN_ALL.*
+
+# npm
+node_modules

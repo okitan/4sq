@@ -5,18 +5,18 @@ require "yaml"
 
 require "pry"
 
-CLOBBER.replace(%w[ KEN_ALL.zip KEN_ALL.CSV KEN_ALL.yaml ])
+CLOBBER.replace(%w[ ken_all.zip ken_all.CSV ken_all.yaml ken_all.rev.yaml ].map {|f| "data/#{f}" })
 
 task download: %i[ clobber ] do
-  `wget http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip`
+  `wget http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip -O data/ken_all.zip`
 end
 
 task unzip: %i[ download ] do
-  `unzip ken_all.zip`
+  `unzip data/ken_all.zip -d data`
 end
 
-task :normalize do
-  lines = CSV.read("KEN_ALL.CSV", encoding: "SJIS")
+task normalize: %w[ unzip ] do
+  lines = CSV.read("data/ken_all.csv", encoding: "SJIS")
 
   # Kyoto sucks
   keep = nil
@@ -69,14 +69,13 @@ task :normalize do
     hash[zipcode][:options] = options if options
   end
 
-  YAML.dump(result, File.open("KEN_ALL.yaml", 'w'))
+  YAML.dump(result, File.open("data/ken_all.yaml", 'w'))
 end
 
 # See: http://www.post.japanpost.jp/zipcode/dl/readme.html
 desc "convert"
-#task convert: %i[ unzip ] do
-task :convert do
-  zipcode_address_map = YAML.load_file("KEN_ALL.yaml")
+task convert: %w[ normalize ] do
+  zipcode_address_map = YAML.load_file("data/ken_all.yaml")
 
   result = zipcode_address_map.each.with_object(Hash.new { |h1,k1| h1[k1] = Hash.new { |h2,k2| h2[k2] = {} } }) do |(zipcode, address), hash|
     if address[:options]
@@ -109,5 +108,5 @@ task :convert do
     end
   end
 
-  YAML.dump(result, File.open("KEN_ALL.rev.yaml", 'w'))
+  YAML.dump(result, File.open("data/ken_all.rev.yaml", 'w'))
 end
