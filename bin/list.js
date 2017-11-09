@@ -32,8 +32,6 @@ const map = {
         return {
           listName:    tr.querySelectorAll("td")[1].innerText.trim(),
           listAddress: tr.querySelectorAll("td")[0].innerText.trim(),
-          closed:      false,
-          url:         "",
         }
       })
     })
@@ -46,6 +44,10 @@ if (shop in map) {
     const page = await browser.newPage()
 
     const results = await map[shop](page)
+    results.forEach(e => {
+      e.closed = false
+      e.url    = ""
+    })
     browser.close()
 
     const file = `venues/${shop}.ltsv`

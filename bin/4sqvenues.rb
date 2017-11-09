@@ -36,6 +36,8 @@ class FoursquareVenues < Thor
   option :closed,   type: :boolean, default: false
   option :no_venue, type: :boolean, default: false
 
+  option :search, desc: "only available with --no-venue", type: :boolean, default: false
+
   display_options(default_fields: %i[ name url zip state city address crossStreet ])
   def view(name)
     venues = load(name)
@@ -43,7 +45,30 @@ class FoursquareVenues < Thor
     venues.select! {|v| !v[:closed] } if options[:closed]
     venues.select! {|v| !v[:url] }    if options[:no_venue]
 
-    format(venues, %i[ listName listAddress ] + options[:fields] + %i[ closed ], options[:format])
+    fields = %i[ listName listAddress ] + options[:fields] + %i[ closed ]
+    if options[:no_venue] && options[:search]
+      id = get_venue_id(name)
+      parent_venue = client.venue(id)
+
+      venues.each do |venue|
+        found = client.search_venues(
+          query:  venue[:listName],
+          near:   "#{parent_venue["location"]["lat"]},#{parent_venue["location"]["lng"]}",
+          intent: "match",
+          limit:  1,
+          radius: 1_000,
+        )["venues"].first
+
+        if found
+          venue[:guessName] = found["name"]
+          venue[:guessUrl]  = get_readable_value(found, "url")
+        end
+      end
+
+      fields += %i[ guessName guessUrl ]
+    end
+
+    format(venues, fields, options[:format])
   end
 
   desc "subvenues VENUE_NAME", "get sub venues of venue"
