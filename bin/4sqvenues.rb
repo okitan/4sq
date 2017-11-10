@@ -41,7 +41,7 @@ class FoursquareVenues < Thor
 
   option :search, desc: "only available with --no-venue", type: :boolean, default: false
 
-  display_options(default_fields: %i[ name url zip state city address crossStreet ])
+  display_options(default_fields: %i[ name url zip state city address crossStreet phone ])
   def view(name)
     venues = load(name)
 
@@ -50,7 +50,7 @@ class FoursquareVenues < Thor
     venues.select! {|v| v[:url] }     if options[:has_venue]
     venues.select! {|v| !v[:url] }    if options[:no_venue]
 
-    fields = %i[ listName listAddress ] + options[:fields] + %i[ closed ]
+    fields = %i[ listName listAddress listPhone ] + options[:fields] + %i[ closed ]
     if options[:no_venue] && options[:search]
       id = get_venue_id(name)
       parent_venue = client.venue(id)
@@ -81,11 +81,11 @@ class FoursquareVenues < Thor
   option :guess_venue, type: :boolean, default: true
   option :update_list, type: :boolean, default: false
 
-  display_options(default_fields: %i[ name url zip state city address crossStreet ])
+  display_options(default_fields: %i[ name url zip state city address crossStreet phone ])
   def subvenues(name)
     if options[:with_list]
       lists  = load(name) rescue []
-      fields = %i[ listName listAddress ] + options[:fields]
+      fields = %i[ listName listAddress listPhone ] + options[:fields]
     else
       lists = []
       fields = options[:fields]

@@ -9,6 +9,17 @@ const fs   = require("fs")
 
 const shop = process.argv[2]
 
+const findPhoneNumber = (str) => {
+  if (str) {
+    const matched = str.match(/(\d{2,4})-?(\d{2,4})-?(\d{3,4})/)
+
+    if (matched) {
+      return matched.slice(1,4).join("")
+    }
+  }
+  return ""
+}
+
 const sortFunction = (a, b) => {
   if (a.listAddress < b.listAddress) {
     return -1
@@ -32,6 +43,7 @@ const map = {
         return {
           listName:    tr.querySelectorAll("td")[1].innerText.trim(),
           listAddress: tr.querySelectorAll("td")[0].innerText.trim(),
+          listPhone:   tr.querySelectorAll("td")[2].innerText.trim(),
         }
       })
     })
@@ -42,7 +54,7 @@ const map = {
     return await page.$$eval("#shopList div.item:not(.all)", divs => {
       return divs.map(div => {
         return {
-          listName: div.querySelector(".name").innerText.trim(),
+          listName:    div.querySelector(".name").innerText.trim(),
           listAddress: div.querySelector(".floor img").alt.trim(),
         }
       })
@@ -57,8 +69,9 @@ if (shop in map) {
 
     const results = await map[shop](page)
     results.forEach(e => {
+      e.listPhone = findPhoneNumber(e.listPhone)
+
       e.closed = false
-      e.url    = ""
     })
     browser.close()
 
@@ -75,13 +88,16 @@ if (shop in map) {
 
         if (match) {
           // replace match one with original one
-          Object.assign(match, originalVenue, { closed: false })
+          Object.assign(originalVenue, match)
+          Object.assign(match, originalVenue)
         } else {
           results.push(originalVenue)
         }
       })
     } catch (err) {
-      // Do Nothing
+      results.forEach(e => {
+        e.url    = ""
+      })
     }
 
     fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)))
