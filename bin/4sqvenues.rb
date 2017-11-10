@@ -33,8 +33,11 @@ class FoursquareVenues < Thor
   extend  FoursquareOptions
 
   desc "view VENUE_NAME", "view venue list manged"
-  option :closed,   type: :boolean, default: false
-  option :no_venue, type: :boolean, default: false
+  option :crossStreet
+
+  option :closed,    type: :boolean, default: false
+  option :has_venue, type: :boolean, default: false
+  option :no_venue,  type: :boolean, default: false
 
   option :search, desc: "only available with --no-venue", type: :boolean, default: false
 
@@ -42,7 +45,9 @@ class FoursquareVenues < Thor
   def view(name)
     venues = load(name)
 
+    venues.select! {|v| v[:listAddress] == options[:crossStreet] } if options[:crossStreet]
     venues.select! {|v| !v[:closed] } if options[:closed]
+    venues.select! {|v| v[:url] }     if options[:has_venue]
     venues.select! {|v| !v[:url] }    if options[:no_venue]
 
     fields = %i[ listName listAddress ] + options[:fields] + %i[ closed ]
@@ -94,6 +99,10 @@ class FoursquareVenues < Thor
     grouped_venues = client.children(id)
     venues = grouped_venues.groups.map {|g| g.items }.flatten.sort {|a, b| a.name <=> b.name }
 
+    if options[:guess_venue]
+      venue_names = lists.map {|list| list[:listName].downcase }
+    end
+
     venues.each do |venue|
       matched = lists.find {|v| v[:url]&.include?(venue["id"]) }
 
@@ -101,12 +110,15 @@ class FoursquareVenues < Thor
         matched.update(compact_venue(venue, options[:fields]))
       else
         if options[:guess_venue]
-          guessed = guess_venue(lists, venue["name"])
-          if guessed
+          # parent_venue might be i10ned...s
+          guessed_name = guess_venue_m17n(venue_names, venue["name"].downcase, ignore: name)
+          if guessed_name
+            guessed = lists.find {|v| v[:listName].downcase == guessed_name }
+
             unless guessed[:url]
               guessed.update(compact_venue(venue, options[:fields]))
             else
-              warn "#{venue["name"]} matched to #{guessed["name"]} duplicate?"
+              warn "#{venue["name"]}(#{get_readable_value(venue, "url")}) matched to #{guessed[:name]}(#{guessed[:url]}) duplicate?"
             end
           else
             unknown.push({ listName: "", listAddress: "" }.merge(compact_venue(venue, options[:fields])))
@@ -139,16 +151,23 @@ class FoursquareVenues < Thor
     LTSV.load("venues/#{name}.ltsv")
   end
 
-  def guess_venue(venues, name)
-    guess = venues.max_by {|v| Diff::LCS.LCS(v[:listName], name).length }
-    matched = Diff::LCS.LCS(guess[:listName], name)
-
-    if (1.0 * matched.length / [ guess[:listName].length, name.length ].min) > 0.7
-      guess
+  def guess_venue_m17n(names, name, ignore: "")
+    if matched = name.match(/([^\(\)]+)\s\(([^\(\)]+)\)/)
+      matched[1..2].map {|n| guess_venue(names, n, ignore: ignore) }.compact.first
     else
-      if matched.size > 5
-        #warn "check: '#{guess[:listName]}' with '#{name}'"
-      end
+      guess_venue(names, name, ignore: ignore)
+    end
+  end
+
+  def guess_venue(names, name, ignore: "")
+    name = name.sub(ignore, "")
+
+    guessed = names.max_by {|n| Diff::LCS.LCS(n.sub(ignore, ""), name).length }
+    matched = Diff::LCS.LCS(guessed.sub(ignore, ""), name)
+
+    if (1.0 * matched.length / [ guessed.sub(ignore, "").length, name.length ].min) > 0.7
+      guessed
+    else
       nil
     end
   end

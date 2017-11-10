@@ -26,6 +26,7 @@ class Foursquare < Thor
   end
 
   desc "fix *VENUE_ID", "show venues"
+  option :parent,   desc: "parent venue name (resolve its id from config)"
   option :parentId, desc: "parent venue id (addresses will be copied from here)"
   option :state
   option :city
@@ -38,11 +39,11 @@ class Foursquare < Thor
   def fix(*venues)
     venues = venues.map {|id| client.venue(id) }
 
-    patches = if options[:parentId]
-      parent_venue = client.venue(options[:parentId])
+    patches = if parent_id = (options[:parent] ? YAML.load_file("./config/venues.yaml")[options[:parent]] : options[:parentId])
+      parent_venue = client.venue(parent_id)
 
       venues.map do |venue|
-        %i[ zip state city address crossStreet ].each.with_object(parentId: options[:parentId]) do |key, hash|
+        %i[ zip state city address ].each.with_object(parentId: parent_id) do |key, hash|
           hash[key] = get_readable_value(parent_venue, key) unless (get_readable_value(venue, key) || "") == get_readable_value(parent_venue, key)
         end
       end
@@ -50,10 +51,13 @@ class Foursquare < Thor
       venues.map {|venue| diff(venue, options[:fields]) }
     end
 
-    %i[ state city address crossStreet ].each do |key|
+    %i[ state city address ].each do |key|
       if options[key]
         patches.each {|patch| patch[key] = options[key] }
       end
+    end
+    if options[:crossStreet]
+      patches.each {|patch| patch[:crossStreet] = [ options[:parent], options[:crossStreet] ].compact.join(" ") }
     end
 
     venues.zip(patches).each do |venue, patch|

@@ -35,13 +35,25 @@ const map = {
         }
       })
     })
+  },
+  "グランツリー武蔵小杉": async (page) => {
+    await page.goto("http://www.grand-tree.jp/web/shop/index.html")
+
+    return await page.$$eval("#shopList div.item:not(.all)", divs => {
+      return divs.map(div => {
+        return {
+          listName: div.querySelector(".name").innerText.trim(),
+          listAddress: div.querySelector(".floor img").alt.trim(),
+        }
+      })
+    })
   }
 }
 
 if (shop in map) {
   (async () => {
-    const browser    = await puppeteer.launch({ headless: true })
-    const page = await browser.newPage()
+    const browser = await puppeteer.launch({ headless: true })
+    const page    = await browser.newPage()
 
     const results = await map[shop](page)
     results.forEach(e => {
