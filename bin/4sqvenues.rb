@@ -119,6 +119,7 @@ class FoursquareVenues < Thor
               guessed.update(compact_venue(venue, options[:fields]))
             else
               warn "#{venue["name"]}(#{get_readable_value(venue, "url")}) matched to #{guessed[:name]}(#{guessed[:url]}) duplicate?"
+              unknown.push({ listName: "", listAddress: "" }.merge(compact_venue(venue, options[:fields])))
             end
           else
             unknown.push({ listName: "", listAddress: "" }.merge(compact_venue(venue, options[:fields])))

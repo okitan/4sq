@@ -59,6 +59,27 @@ const map = {
         }
       })
     })
+  },
+  "武蔵小杉東急スクエア": async (page) => {
+    let list = []
+    for (let i=1; i <=5; i++) {
+      await page.goto(`http://www.kosugi-square.com/floor/?fcd=${i}`)
+      const crossStreet = `${i}F`
+
+      const shops = await page.$$eval("div.floorlist__txt", divs => {
+        return divs.map(div => {
+          return {
+            listName:  div.querySelector(".floorlist__txt--shopname").innerText.trim(),
+            listPhone: div.querySelector(".floorlist__txt--tel").innerText.trim(),
+          }
+        })
+      })
+      shops.forEach(e => {
+        e.listAddress = crossStreet
+        list.push(e)
+      })
+    }
+    return list
   }
 }
 
@@ -103,6 +124,5 @@ if (shop in map) {
     fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)))
 
     // console.log(JSON.stringify(results.sort(sortFunction)))
-
   })()
 }
