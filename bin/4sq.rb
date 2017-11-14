@@ -26,6 +26,8 @@ class Foursquare < Thor
   end
 
   desc "fix *VENUE_ID", "show venues"
+  option :name
+
   option :parent,   desc: "parent venue name (resolve its id from config)"
   option :parentId, desc: "parent venue id (addresses will be copied from here)"
   option :state
@@ -51,7 +53,7 @@ class Foursquare < Thor
       venues.map {|venue| diff(venue, options[:fields]) }
     end
 
-    %i[ state city address ].each do |key|
+    %i[ name state city address ].each do |key|
       if options[key]
         patches.each {|patch| patch[key] = options[key] }
       end
