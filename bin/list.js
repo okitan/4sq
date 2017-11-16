@@ -102,8 +102,6 @@ if (shop in map) {
       fs.statSync(file)
 
       const original = ltsv.parse(fs.readFileSync(file))
-      original.forEach(e => { e.closed = true })
-
       original.forEach(originalVenue => {
         const match = results.find(e => e.listName == originalVenue.listName)
 
@@ -112,6 +110,12 @@ if (shop in map) {
           Object.assign(originalVenue, match)
           Object.assign(match, originalVenue)
         } else {
+          originalVenue.closed = true
+
+          if (!("url" in originalVenue)) {
+            originalVenue.url = ""
+          }
+
           results.push(originalVenue)
         }
       })
