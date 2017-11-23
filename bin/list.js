@@ -4,6 +4,7 @@
 
 const puppeteer = require('puppeteer')
 
+const { render } = require("mustache")
 const yaml = require('js-yaml')
 const ltsv = require("ltsv")
 const fs   = require("fs")
@@ -37,75 +38,77 @@ const sortFunction = (a, b) => {
 
 const config = yaml.safeLoad(fs.readFileSync("./config/venues.yaml"))
 
-const map = {
-  "武蔵小杉東急スクエア": async (page) => {
-    let list = []
-    for (let i=1; i <=5; i++) {
-      await page.goto(`http://www.kosugi-square.com/floor/?fcd=${i}`)
-      const crossStreet = `${i}F`
+const getShopsWithTemplate = async (page, { items, shops:shopTemplate }) => {
+  let results = []
+  for (const item in items) {
+    const shopConfig = {}
 
-      const shops = await page.$$("div.floorlist__txt")
-
-      list.push(...await Promise.all(shops.map(async shop => {
-        return {
-          listName:    (await shop.$(".floorlist__txt--shopname").then(e   => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
-          listAddress: crossStreet,
-          listPhone: findPhoneNumber((await shop.$(".floorlist__txt--tel").then(e  => e.getProperty("textContent")).then(e => e.jsonValue()))),
+    // make config from template
+    shopConfig.url       = render(shopTemplate.url, { item: item }) // TODO: resolve mustache
+    shopConfig.selector  = shopTemplate.selector
+    shopConfig.attributes = {}
+    for (const attribute of [ "listName", "listAddress", "listPhone" ]) {
+      if (attribute in shopTemplate.attributes) {
+        if (typeof shopTemplate.attributes[attribute] === "string") {
+          shopConfig.attributes[attribute] = render(shopTemplate.attributes[attribute], { item: item })
+        } else {
+          shopConfig.attributes[attribute] = shopTemplate.attributes[attribute]
         }
-      })))
+      }
     }
-    return list
-  }
-}
 
-const getShops = async (page, shopConfig) => {
-  const results = []
-  for (const [ url, selectorMap ] of Object.entries(shopConfig)) {
-    await page.goto(url, { timeout: 300 * 1000 }) //グランツリー武蔵小杉 is too slow
-
-    for (const [ selector, attributeMap ] of Object.entries(selectorMap)) {
-      const shops = await page.$$(selector)
-
-      results.push(...await Promise.all(shops.map(async shop => {
-        const result = {}
-        for (const attribute of [ "listName", "listAddress", "listPhone" ]) {
-          if (attribute in attributeMap) {
-            let propertySelector, property
-
-            if (typeof attributeMap[attribute] == "string") {
-              propertySelector = attributeMap[attribute]
-              property = "textContent"
-            } else {
-              ({ propertySelector, property } = attributeMap[attribute])
-            }
-            let value = (await shop.$(propertySelector).then(e => e.getProperty(property)).then(e => e.jsonValue())).trim()
-
-            if (attribute == "listPhone") {
-              value = findPhoneNumber(value)
-            }
-
-            result[attribute] = value
-          }
-        }
-        return result
-      })))
-    }
+    results.push(...await getShops(page, shopConfig))
   }
   return results
 }
 
-if (shop in config || shop in map) {
+const getShops = async (page, { url, selector, attributes }) => {
+  await page.goto(url, { timeout: 300 * 1000 }) //グランツリー武蔵小杉 is too slow
+
+  const shops = await page.$$(selector)
+
+  return await Promise.all(shops.map(async shop => {
+    const result = {}
+    for (const attribute of [ "listName", "listAddress", "listPhone" ]) {
+      if (attribute in attributes) {
+        let value
+        if (typeof attributes[attribute] == "object") {
+          let { propertySelector, property } = attributes[attribute]
+          property = property || "textContent"
+
+          value = (await shop.$(propertySelector).then(e => e.getProperty(property)).then(e => e.jsonValue())).trim()
+        } else {
+          value = attributes[attribute]
+        }
+
+        if (attribute == "listPhone") {
+          value = findPhoneNumber(value)
+        }
+
+        result[attribute] = value
+      }
+    }
+    return result
+  }))
+}
+
+if (shop in config) {
   (async () => {
     const browser = await puppeteer.launch({ headless: (process.env.NO_HEADLESS ? false : true) })
     const page    = await browser.newPage()
 
-    let results
-    if (shop in config && "shops" in config[shop]) {
-      results = await getShops(page, config[shop].shops)
-    } else {
-      results = await map[shop](page)
+    let results = []
+    if ("templates" in config[shop]) {
+      for(const template of config[shop].templates) {
+        results.push(...await getShopsWithTemplate(page, template))
+      }
+    } else if ("shops" in config[shop]) {
+      for(const configShop of config[shop].shops) {
+        results.push(...await getShops(page, configShop))
+      }
     }
     browser.close()
+    console.log(results)
 
     results.forEach(e => {
       e.closed = false
@@ -139,6 +142,6 @@ if (shop in config || shop in map) {
       }
     })
 
-    fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)) + "\n")
+    // fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)) + "\n")
   })()
 }

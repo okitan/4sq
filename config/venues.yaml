@@ -2,19 +2,36 @@
 ららテラス武蔵小杉:
   id: 52ef1927498e945f59640219
   shops:
-    "http://www.lalaterrace-musashikosugi.com/floor/floorall":
-      "table tr":
-        listName:    td.shopName
-        listAddress: td.shopNumber
-        listPhone:   td.shopTel
+  - url: "http://www.lalaterrace-musashikosugi.com/floor/floorall"
+    selector: "table tr"
+    attributes:
+      listName:
+        propertySelector: td.shopName
+      listAddress:
+        propertySelector: td.shopNumber
+      listPhone:
+        propertySelector: td.shopTel
 グランツリー武蔵小杉:
   id: 5361cba0498e5839aa495469
   shops:
-    "http://www.grand-tree.jp/web/shop/index.html":
-      "#shopList div.item:not(.all)":
-        listName:    .name
-        listAddress:
-          propertySelector: ".floor img"
-          property:         alt
+  - url: "http://www.grand-tree.jp/web/shop/index.html"
+    selctor: "#shopList div.item:not(.all)"
+    attributes:
+      listName:
+        propertySelector: .name
+      listAddress:
+        propertySelector: ".floor img"
+        property:         alt
 武蔵小杉東急スクエア:
   id: 50966024e4b0ad0d96424f52
+  templates:
+  - items: [ 1, 2, 3, 4, 5 ]
+    shops:
+      url: "http://www.kosugi-square.com/floor/?fcd={{item}}"
+      selector: "div.floorlist__txt"
+      attributes:
+        listName:
+          propertySelector: ".floorlist__txt--shopname"
+        listAddress: "{{item}}F"
+        listPhone:
+          propertySelector: ".floorlist__txt--tel"
