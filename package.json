@@ -19,6 +19,6 @@
   "private": true,
   "dependencies": {
     "ltsv": "^0.7.5",
-    "puppeteer": "^0.12.0"
+    "puppeteer": "^0.13.0"
   }
 }

@@ -49,7 +49,7 @@ const map = {
     })
   },
   "グランツリー武蔵小杉": async (page) => {
-    await page.goto("http://www.grand-tree.jp/web/shop/index.html")
+    await page.goto("http://www.grand-tree.jp/web/shop/index.html", { timeout: 300 * 1000 }) // fucking slow
 
     return await page.$$eval("#shopList div.item:not(.all)", divs => {
       return divs.map(div => {
@@ -85,7 +85,7 @@ const map = {
 
 if (shop in map) {
   (async () => {
-    const browser = await puppeteer.launch({ headless: true })
+    const browser = await puppeteer.launch({ headless: (process.env.NO_HEADLESS ? false : true) })
     const page    = await browser.newPage()
 
     const results = await map[shop](page)
@@ -112,18 +112,18 @@ if (shop in map) {
         } else {
           originalVenue.closed = true
 
-          if (!("url" in originalVenue)) {
-            originalVenue.url = ""
-          }
-
           results.push(originalVenue)
         }
       })
     } catch (err) {
-      results.forEach(e => {
-        e.url    = ""
-      })
+      // Do Nothing
     }
+
+    results.forEach(e => {
+      if (!("url" in e)) {
+        e.url = ""
+      }
+    })
 
     fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)))
 
