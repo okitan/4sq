@@ -108,7 +108,6 @@ if (shop in config) {
       }
     }
     browser.close()
-    console.log(results)
 
     results.forEach(e => {
       e.closed = false
@@ -142,6 +141,6 @@ if (shop in config) {
       }
     })
 
-    // fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)) + "\n")
+    fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)) + "\n")
   })()
 }
