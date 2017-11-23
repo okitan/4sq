@@ -38,27 +38,26 @@ const map = {
   "ららテラス武蔵小杉": async (page) => {
     await page.goto("http://www.lalaterrace-musashikosugi.com/floor/floorall")
 
-    return await page.$$eval("table tr", trs => {
-      return trs.map(tr => {
-        return {
-          listName:    tr.querySelectorAll("td")[1].innerText.trim(),
-          listAddress: tr.querySelectorAll("td")[0].innerText.trim(),
-          listPhone:   tr.querySelectorAll("td")[2].innerText.trim(),
-        }
-      })
-    })
+    const shops = await page.$$("table tr")
+    return await Promise.all(shops.map(async shop => {
+      return {
+        listName:    (await shop.$("td.shopName").then(e   => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
+        listAddress: (await shop.$("td.shopNumber").then(e => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
+        listPhone: findPhoneNumber((await shop.$("td.shopTel").then(e  => e.getProperty("textContent")).then(e => e.jsonValue()))),
+      }
+    }))
   },
   "グランツリー武蔵小杉": async (page) => {
     await page.goto("http://www.grand-tree.jp/web/shop/index.html", { timeout: 300 * 1000 }) // fucking slow
 
-    return await page.$$eval("#shopList div.item:not(.all)", divs => {
-      return divs.map(div => {
-        return {
-          listName:    div.querySelector(".name").innerText.trim(),
-          listAddress: div.querySelector(".floor img").alt.trim(),
-        }
-      })
-    })
+    const shops = await page.$$("#shopList div.item:not(.all)")
+
+    return await Promise.all(shops.map(async shop => {
+      return {
+        listName:    (await shop.$(".name").then(e => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
+        listAddress: (await shop.$(".floor img").then(e => e.getProperty("alt")).then(e => e.jsonValue())).trim(),
+      }
+    }))
   },
   "武蔵小杉東急スクエア": async (page) => {
     let list = []
@@ -66,18 +65,15 @@ const map = {
       await page.goto(`http://www.kosugi-square.com/floor/?fcd=${i}`)
       const crossStreet = `${i}F`
 
-      const shops = await page.$$eval("div.floorlist__txt", divs => {
-        return divs.map(div => {
-          return {
-            listName:  div.querySelector(".floorlist__txt--shopname").innerText.trim(),
-            listPhone: div.querySelector(".floorlist__txt--tel").innerText.trim(),
-          }
-        })
-      })
-      shops.forEach(e => {
-        e.listAddress = crossStreet
-        list.push(e)
-      })
+      const shops = await page.$$("div.floorlist__txt")
+
+      list.push(...await Promise.all(shops.map(async shop => {
+        return {
+          listName:    (await shop.$(".floorlist__txt--shopname").then(e   => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
+          listAddress: crossStreet,
+          listPhone: findPhoneNumber((await shop.$(".floorlist__txt--tel").then(e  => e.getProperty("textContent")).then(e => e.jsonValue()))),
+        }
+      })))
     }
     return list
   }
@@ -90,8 +86,6 @@ if (shop in map) {
 
     const results = await map[shop](page)
     results.forEach(e => {
-      e.listPhone = findPhoneNumber(e.listPhone)
-
       e.closed = false
     })
     browser.close()
@@ -125,8 +119,6 @@ if (shop in map) {
       }
     })
 
-    fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)))
-
-    // console.log(JSON.stringify(results.sort(sortFunction)))
+    fs.writeFileSync(file, ltsv.format(results.sort(sortFunction)) + "\n")
   })()
 }
