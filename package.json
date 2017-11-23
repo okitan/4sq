@@ -18,6 +18,7 @@
   "homepage": "https://github.com/okitan/4sq#readme",
   "private": true,
   "dependencies": {
+    "js-yaml": "^3.10.0",
     "ltsv": "^0.7.5",
     "puppeteer": "^0.13.0"
   }

@@ -4,6 +4,7 @@
 
 const puppeteer = require('puppeteer')
 
+const yaml = require('js-yaml')
 const ltsv = require("ltsv")
 const fs   = require("fs")
 
@@ -34,31 +35,9 @@ const sortFunction = (a, b) => {
   return 0
 }
 
+const config = yaml.safeLoad(fs.readFileSync("./config/venues.yaml"))
+
 const map = {
-  "ららテラス武蔵小杉": async (page) => {
-    await page.goto("http://www.lalaterrace-musashikosugi.com/floor/floorall")
-
-    const shops = await page.$$("table tr")
-    return await Promise.all(shops.map(async shop => {
-      return {
-        listName:    (await shop.$("td.shopName").then(e   => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
-        listAddress: (await shop.$("td.shopNumber").then(e => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
-        listPhone: findPhoneNumber((await shop.$("td.shopTel").then(e  => e.getProperty("textContent")).then(e => e.jsonValue()))),
-      }
-    }))
-  },
-  "グランツリー武蔵小杉": async (page) => {
-    await page.goto("http://www.grand-tree.jp/web/shop/index.html", { timeout: 300 * 1000 }) // fucking slow
-
-    const shops = await page.$$("#shopList div.item:not(.all)")
-
-    return await Promise.all(shops.map(async shop => {
-      return {
-        listName:    (await shop.$(".name").then(e => e.getProperty("textContent")).then(e => e.jsonValue())).trim(),
-        listAddress: (await shop.$(".floor img").then(e => e.getProperty("alt")).then(e => e.jsonValue())).trim(),
-      }
-    }))
-  },
   "武蔵小杉東急スクエア": async (page) => {
     let list = []
     for (let i=1; i <=5; i++) {
@@ -79,19 +58,60 @@ const map = {
   }
 }
 
-if (shop in map) {
+const getShops = async (page, shopConfig) => {
+  const results = []
+  for (const [ url, selectorMap ] of Object.entries(shopConfig)) {
+    await page.goto(url, { timeout: 300 * 1000 }) //グランツリー武蔵小杉 is too slow
+
+    for (const [ selector, attributeMap ] of Object.entries(selectorMap)) {
+      const shops = await page.$$(selector)
+
+      results.push(...await Promise.all(shops.map(async shop => {
+        const result = {}
+        for (const attribute of [ "listName", "listAddress", "listPhone" ]) {
+          if (attribute in attributeMap) {
+            let propertySelector, property
+
+            if (typeof attributeMap[attribute] == "string") {
+              propertySelector = attributeMap[attribute]
+              property = "textContent"
+            } else {
+              ({ propertySelector, property } = attributeMap[attribute])
+            }
+            let value = (await shop.$(propertySelector).then(e => e.getProperty(property)).then(e => e.jsonValue())).trim()
+
+            if (attribute == "listPhone") {
+              value = findPhoneNumber(value)
+            }
+
+            result[attribute] = value
+          }
+        }
+        return result
+      })))
+    }
+  }
+  return results
+}
+
+if (shop in config || shop in map) {
   (async () => {
     const browser = await puppeteer.launch({ headless: (process.env.NO_HEADLESS ? false : true) })
     const page    = await browser.newPage()
 
-    const results = await map[shop](page)
+    let results
+    if (shop in config && "shops" in config[shop]) {
+      results = await getShops(page, config[shop].shops)
+    } else {
+      results = await map[shop](page)
+    }
+    browser.close()
+
     results.forEach(e => {
       e.closed = false
     })
-    browser.close()
 
     const file = `venues/${shop}.ltsv`
-
     try {
       fs.statSync(file)
 
