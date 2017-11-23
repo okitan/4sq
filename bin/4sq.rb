@@ -41,7 +41,7 @@ class Foursquare < Thor
   def fix(*venues)
     venues = venues.map {|id| client.venue(id) }
 
-    patches = if parent_id = (options[:parent] ? YAML.load_file("./config/venues.yaml")[options[:parent]] : options[:parentId])
+    patches = if parent_id = (options[:parent] ? YAML.load_file("./config/venues.yaml")[options[:parent]]["id"] : options[:parentId])
       parent_venue = client.venue(parent_id)
 
       venues.map do |venue|

@@ -141,7 +141,7 @@ class FoursquareVenues < Thor
   end
 
   def get_venue_id(name)
-    config[name] || raise("no venue found #{name}")
+    config[name]["id"] || raise("no venue found #{name}")
   end
 
   def save(name, venues)
