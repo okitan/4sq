@@ -86,6 +86,8 @@ const getShops = async (page, { url, selector, attributes }) => {
         }
 
         result[attribute] = value
+      } else {
+        result[attribute] = ""
       }
     }
     return result
