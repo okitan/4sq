@@ -67,16 +67,16 @@ const getShops = async (page, { url, selector, attributes }) => {
 
   const shops = await page.$$(selector)
 
-  return await Promise.all(shops.map(async shop => {
+  return Promise.all(shops.map(async shop => {
     const result = {}
     for (const attribute of [ "listName", "listAddress", "listPhone" ]) {
       if (attribute in attributes) {
         let value
         if (typeof attributes[attribute] == "object") {
           let { propertySelector, property } = attributes[attribute]
-          property = property || "textContent"
+          property = property || "innerText"
 
-          value = (await shop.$(propertySelector).then(e => e.getProperty(property)).then(e => e.jsonValue())).trim()
+          value = (await (await (await shop.$(propertySelector)).getProperty(property)).jsonValue()).trim()
         } else {
           value = attributes[attribute]
         }
