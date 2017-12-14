@@ -40,7 +40,7 @@ const config = yaml.safeLoad(fs.readFileSync("./config/venues.yaml"))
 
 const getShopsWithTemplate = async (page, { items, shops:shopTemplate }) => {
   let results = []
-  for (const item in items) {
+  for (const item of items) {
     const shopConfig = {}
 
     // make config from template
