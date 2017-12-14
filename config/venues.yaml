@@ -15,7 +15,7 @@
   id: 5361cba0498e5839aa495469
   shops:
   - url: "http://www.grand-tree.jp/web/shop/index.html"
-    selctor: "#shopList div.item:not(.all)"
+    selector: "#shopList div.item:not(.all)"
     attributes:
       listName:
         propertySelector: .name
