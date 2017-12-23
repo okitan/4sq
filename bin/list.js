@@ -77,7 +77,12 @@ const getShops = async (page, { url, selector, attributes }) => {
             let { propertySelector, property } = attributes[attribute];
             property = property || 'innerText';
 
-            value = (await (await (await shop.$(propertySelector)).getProperty(property)).jsonValue()).trim();
+            value = (await (await (await shop.$(propertySelector)).getProperty(property)).jsonValue())
+              .trim()
+              .replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+                // https://qiita.com/yamikoo@github/items/5dbcc77b267a549bdbae
+                return String.fromCharCode(s.charCodeAt(0) - 0xfee0);
+              });
           } else {
             value = attributes[attribute];
           }
