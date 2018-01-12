@@ -4,6 +4,7 @@ module FoursquareClient
   protected
    def client
     @client ||= Foursquare2::Client.new(
+      locale: "ja",
       oauth_token: ENV["ACCESS_TOKEN"], api_version: "20171101",
       #connection_middleware: [ FaradayMiddleware::FollowRedirects ]
     )

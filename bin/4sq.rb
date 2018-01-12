@@ -6,15 +6,12 @@ require_relative "../lib/4sq_options"
 require_relative "../lib/zipcode"
 
 require "thor"
-
-require "foursquare2"
-
 require "pry"
 
 # suppress warning
 Hashie.logger = Logger.new("/dev/null")
 
-class Foursquare < Thor
+class FoursquareCLI < Thor
   include FoursquareClient
   include FoursquareFormatter
   extend  FoursquareOptions
@@ -180,4 +177,4 @@ class Foursquare < Thor
   end
 end
 
-Foursquare.start
+FoursquareCLI.start

@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require_relative "../lib/4sq_category"
 require_relative "../lib/4sq_client"
 require_relative "../lib/4sq_formatter"
 require_relative "../lib/4sq_options"
@@ -27,10 +28,47 @@ end
 # suppress warning
 Hashie.logger = Logger.new("/dev/null")
 
-class FoursquareVenues < Thor
+class FoursquareVenuesCLI < Thor
+  include FoursquareCategory
   include FoursquareClient
   include FoursquareFormatter
   extend  FoursquareOptions
+
+  desc "add VENUE_NAME SUBVENUE_NAME", "add subvenue to venue"
+  category_option
+  # https://developer.foursquare.com/docs/api/venues/add
+  def add(name, subvenue_name)
+    subvenue = load(name).find {|e| e[:listName] == subvenue_name }
+
+    if subvenue
+      if subvenue[:url]
+        warn "venue is already assigned for #{subvenue_name}: #{subvenue[:url]}"
+        return
+      end
+    else
+      warn "no subvenue name #{subvenue_name}"
+      return
+    end
+
+    venue = client.venue(get_venue_id(name))
+    #p venue
+
+    # TODO:
+    subvenue_option = {
+      name: subvenue[:listName],
+      ll: "#{venue.location.lat},#{venue.location.lng}",
+      zip: venue.location.postalCode,
+      state: venue.location.state,
+      city:  venue.location.city,
+      address: [ venue.name,  subvenue[:listAddress] ].join(" "),
+      phone: subvenue[:listPhone],
+
+    }
+    p subvenue_option
+
+    #client.add_venue(subvenue_option)
+
+  end
 
   desc "view VENUE_NAME", "view venue list manged"
   option :crossStreet
@@ -174,4 +212,4 @@ class FoursquareVenues < Thor
   end
 end
 
-FoursquareVenues.start
+FoursquareVenuesCLI.start
