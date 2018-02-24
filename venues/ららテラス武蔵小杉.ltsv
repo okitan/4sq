@@ -2,7 +2,7 @@ listName:はなまるダイニングセレクト	listAddress:1F 105	listPhone:04
 listName:魚力	listAddress:1F-101	listPhone:0444300811	closed:false	url:https://ja.foursquare.com/v/56ef9da9498e8a77e0c7aa95	name:魚力 ららテラス武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:	crossStreet:	phone:
 listName:肉処大和/カイゼル ハム	listAddress:1F-102	listPhone:0444117511	closed:false	url:
 listName:鳥武	listAddress:1F-103	listPhone:0444117511	closed:false	url:
-listName:紅燈籠	listAddress:1F-104	listPhone:0449823588	closed:false	url:
+listName:紅燈籠	listAddress:1F-104	listPhone:0449823588	closed:false	url:https://ja.foursquare.com/v/5a8eaebfe2d4aa71df76e246	name:紅燈籠	zip:2110004	state:神奈川県	city:川崎市	address:	crossStreet:	phone:
 listName:成城石井	listAddress:1F-106	listPhone:0444301667	closed:false	url:https://ja.foursquare.com/v/5433b94f498efe79610f5ac6	name:成城石井	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1302	crossStreet:ららテラス武蔵小杉 1F	phone:0444301667
 listName:irina	listAddress:1F-107-1	listPhone:0448729099	closed:false	url:
 listName:Pie king	listAddress:1F-107-2	listPhone:0448729966	closed:false	url:https://ja.foursquare.com/v/58b54f7a5eef111ec5d9e2df	name:Pie King ららテラス武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1302	crossStreet:1F	phone:
@@ -33,9 +33,8 @@ listName:UNITED ARROWS green label relaxing	listAddress:2F-209	listPhone:0444301
 listName:ビルケンシュトック	listAddress:2F-210	listPhone:0449823012	closed:false	url:https://ja.foursquare.com/v/571b41e9498e791d9fbe50d4	name:BIRKENSTOCK (ビルケンシュトック) ららテラス武蔵小杉	zip:	state:	city:	address:	crossStreet:	phone:
 listName:AMPHI FULFRU	listAddress:2F-211	listPhone:0449485082	closed:false	url:
 listName:イア パピヨネ	listAddress:2F-212	listPhone:0449829713	closed:false	url:
-listName:KUWA KUWA KOBE	listAddress:2F-213	listPhone:	closed:false	url:
+listName:COTOMONO MARCHE	listAddress:2F-213	listPhone:0449820023	closed:false	url:
 listName:charlotte by ABC-MART	listAddress:2F-214	listPhone:0444313125	closed:false	url:
-listName:ヘルシーバックバッグ	listAddress:2F-215	listPhone:	closed:false	url:
 listName:KBF+	listAddress:2F-216	listPhone:0448636602	closed:false	url:
 listName:DoCLASSE	listAddress:2F-217	listPhone:0448636301	closed:false	url:https://ja.foursquare.com/v/59635ee6f00a706a94984eab	name:Doclasse ららテラス武蔵小杉店	zip:2110063	state:神奈川県	city:川崎市中原区	address:新丸子東3-1302	crossStreet:ららテラス武蔵小杉2階	phone:
 listName:モンベル	listAddress:3F-301	listPhone:0444313456	closed:false	url:https://ja.foursquare.com/v/534f7b9d498e2a0cf4226431	name:mont-bell	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1302	crossStreet:ららテラス武蔵小杉 3F	phone:0444313456
