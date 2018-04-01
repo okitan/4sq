@@ -183,7 +183,7 @@ class FoursquareVenuesCLI < Thor
   end
 
   def save(name, venues)
-    File.write("venues/#{name}.ltsv", venues.map {|v| LTSV.dump(v) }.join("\n"))
+    File.write("venues/#{name}.ltsv", venues.map {|v| LTSV.dump(v) }.join("\n") + "\n")
   end
 
   def load(name)
