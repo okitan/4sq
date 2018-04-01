@@ -1,16 +1,16 @@
 ---
 ららテラス武蔵小杉:
   id: 52ef1927498e945f59640219
-  shops:
-  - url: "http://www.lalaterrace-musashikosugi.com/floor/floorall"
-    selector: "table tr"
-    attributes:
-      listName:
-        propertySelector: td.shopName
-      listAddress:
-        propertySelector: td.shopNumber
-      listPhone:
-        propertySelector: td.shopTel
+  templates:
+  - items: [ 0, 40 ]
+    shops:
+      url: "https://mitsui-shopping-park.com/lalat-musashikosugi/shopguide/?start={{item}}"
+      selector: "ul.shop-guide-list-wrap li"
+      attributes:
+        listName:
+          propertySelector: ".shop-name"
+        listAddress:
+          propertySelector: ".floor-num"
 グランツリー武蔵小杉:
   id: 5361cba0498e5839aa495469
   shops:
