@@ -21,6 +21,6 @@
     "js-yaml": "^3.10.0",
     "ltsv": "^0.7.5",
     "mustache": "^2.3.0",
-    "puppeteer": "^0.13.0"
+    "puppeteer": "^1.3.0"
   }
 }

@@ -73,7 +73,7 @@ const getShops = async (page, { url, selector, attributes }) => {
       for (const attribute of ['listName', 'listAddress', 'listPhone']) {
         if (attribute in attributes) {
           let value;
-          if (typeof attributes[attribute] == 'object') {
+          if (typeof attributes[attribute] === 'object') {
             let { propertySelector, property } = attributes[attribute];
             property = property || 'innerText';
 

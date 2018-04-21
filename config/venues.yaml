@@ -35,3 +35,26 @@
         listAddress: "{{item}}F"
         listPhone:
           propertySelector: ".floorlist__txt--tel"
+ヒカリエ:
+  id: 4bd557cc6798ef3b4735638d
+  templates:
+  - items: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
+    shops:
+      url: "http://www.hikarie.jp/floormap/{{item}}F.html"
+      selector: "#floorshop .shopbox"
+      attributes:
+        listName:
+          propertySelector: ".shoplogo"
+        listAddress: "{{item}}F"
+        listPhone:
+          propertySelector: ".shop_info_m dd:nth-of-type(2), .shop_info_67_r dl:nth-of-type(3) dd"
+  - items: [ B3, B2, B1 ]
+    shops:
+      url: "http://www.hikarie.jp/floormap/{{item}}.html"
+      selector: "#floorshop .shopbox"
+      attributes:
+        listName:
+          propertySelector: ".shoplogo"
+        listAddress: "{{item}}F"
+        listPhone:
+          propertySelector: ".shop_info_m dd:nth-of-type(2), .shop_info_67_r dl:nth-of-type(3) dd"
