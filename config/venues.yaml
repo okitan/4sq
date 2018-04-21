@@ -37,6 +37,8 @@
           propertySelector: ".floorlist__txt--tel"
 ヒカリエ:
   id: 4bd557cc6798ef3b4735638d
+  subvenues:
+    - 4f7f9ceae4b023c637e055ec
   templates:
   - items: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
     shops:

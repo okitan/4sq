@@ -134,8 +134,10 @@ class FoursquareVenuesCLI < Thor
     id = get_venue_id(name)
     parent_venue = client.venue(id)
 
-    grouped_venues = client.children(id)
-    venues = grouped_venues.groups.map {|g| g.items }.flatten.sort {|a, b| a.name <=> b.name }
+    venues = [ id, *get_venue_children(name) ].map do |venue_id|
+      client.children(venue_id).groups.map {|g| g.items }
+    end
+    venues = venues.flatten.sort {|a, b| a.name <=> b.name }
 
     if options[:guess_venue]
       venue_names = lists.map {|list| list[:listName].downcase }
@@ -180,6 +182,10 @@ class FoursquareVenuesCLI < Thor
 
   def get_venue_id(name)
     config[name]["id"] || raise("no venue found #{name}")
+  end
+
+  def get_venue_children(name)
+    config[name]["subvenues"] || []
   end
 
   def save(name, venues)
