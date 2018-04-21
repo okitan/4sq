@@ -24,7 +24,7 @@ listName:ル・コンシデラン	listAddress:1F	listPhone:0364341487	closed:fal
 listName:極上担々麺 香家	listAddress:1F	listPhone:0364341839	closed:false	url:https://ja.foursquare.com/v/59cc6ea623472459fe4e0261	name:香家	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:渋谷ヒカリエ ShinQs 1F	phone:0364341839
 listName:17℃ by Blondoll (17℃ バイ ブロンドール)	listAddress:2F	listPhone:0364341726	closed:false	url:
 listName:CA4LA delica (カシラ デリカ)	listAddress:2F	listPhone:0334862368	closed:false	url:https://ja.foursquare.com/v/4fa64694e4b0752c6a0477e5	name:CA4LA delica	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 2F	phone:0334862368
-listName:JUICERY by Cosme Kitchen（ジューサリー バイ コスメキッチン）	listAddress:2F	listPhone:0364341734	closed:false	url:https://ja.foursquare.com/v/5753eca7498ea375c2b34d4d
+listName:JUICERY by Cosme Kitchen（ジューサリー バイ コスメキッチン）	listAddress:2F	listPhone:0364341734	closed:false	url:https://ja.foursquare.com/v/5753eca7498ea375c2b34d4d	name:JUICERY by Cosme Kitchen	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 2F	phone:0364341734
 listName:Maison de Beige（メゾン ド ベージュ）	listAddress:2F	listPhone:0364341693	closed:false	url:
 listName:M・A・C（マック）	listAddress:2F	listPhone:0334868027	closed:false	url:
 listName:ShinQs  パーツ ジョイスト	listAddress:2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/533a96bb498e81d3c7a8c89f	name:ShinQsパーツジョイスト	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 2F	phone:0334611090
@@ -52,7 +52,7 @@ listName:ふりそでモード ウェディング・ボックス	listAddress:3F	
 listName:オデット エ オディール	listAddress:3F	listPhone:0364187253	closed:false	url:
 listName:カメラのキタムラ	listAddress:3F	listPhone:0357783558	closed:false	url:https://ja.foursquare.com/v/58269c381dbf6c7dd873df8a	name:カメラのキタムラ	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 3F	phone:0357783558
 listName:サマンサタバサプチチョイスプラス	listAddress:3F	listPhone:0364341695	closed:false	url:
-listName:スミス	listAddress:3F	listPhone:0364272330	closed:false	url:https://ja.foursquare.com/v/4f9d0fbee4b046b0ccd601b0
+listName:スミス	listAddress:3F	listPhone:0364272330	closed:false	url:https://ja.foursquare.com/v/4f9d0fbee4b046b0ccd601b0	name:Smith	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 3F	phone:0364272330
 listName:セオリー	listAddress:3F	listPhone:0364341691	closed:false	url:
 listName:ダイアナ ロマーシュ	listAddress:3F	listPhone:0364341703	closed:false	url:
 listName:ドロシーズ	listAddress:3F	listPhone:0364341665	closed:false	url:
@@ -84,7 +84,7 @@ listName:ダンスキン ビューティフル シングス	listAddress:4F	listP
 listName:チックタック	listAddress:4F	listPhone:0364341642	closed:false	url:
 listName:トゥデイズ スペシャル	listAddress:4F	listPhone:0364341671	closed:false	url:
 listName:トラベルショップ ミレスト	listAddress:4F	listPhone:0364341530	closed:false	url:
-listName:ハーブス	listAddress:4F	listPhone:0364341678	closed:false	url:https://ja.foursquare.com/v/4f8c1eb7a17c515434dfe94f
+listName:ハーブス	listAddress:4F	listPhone:0364341678	closed:false	url:https://ja.foursquare.com/v/4f8c1eb7a17c515434dfe94f	name:HARBS	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:渋谷ヒカリエShinQs 4F	phone:0364341678
 listName:ビームス ライツ	listAddress:4F	listPhone:0354643580	closed:false	url:
 listName:フレッドペリー	listAddress:4F	listPhone:0364341832	closed:false	url:
 listName:マザーハウス	listAddress:4F	listPhone:0364276364	closed:false	url:
@@ -139,7 +139,7 @@ listName:COURT （コート）	listAddress:8F	listPhone:0364184718	closed:false	
 listName:CUBE 1,2,3 （キューブ）	listAddress:8F	listPhone:0364184718	closed:false	url:
 listName:Creative Lounge MOV	listAddress:8F	listPhone:0345338000	closed:false	url:https://ja.foursquare.com/v/4f9907a9e4b0b41ef3307559	name:Creative Lounge MOV	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 8F 8/	phone:0345338000
 listName:d47 MUSEUM （ディヨンナナ ミュージアム）	listAddress:8F	listPhone:0364272301	closed:false	url:https://ja.foursquare.com/v/4f956ce3e4b0e29f5649ece5	name:d47 MUSEUM	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 8F	phone:0364272301
-listName:d47 design travel store	listAddress:8F	listPhone:0364272301	closed:false	url:
+listName:d47 design travel store	listAddress:8F	listPhone:0364272301	closed:false	url:https://ja.foursquare.com/v/4f94d3c0e4b061a426e293c0	name:8/05/d47 design travel store	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 8F	phone:0364272302
 listName:d47食堂	listAddress:8F	listPhone:0364272303	closed:false	url:https://ja.foursquare.com/v/4f9786071081bc348b7989bf	name:d47食堂	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 8F	phone:0364272303
 listName:川本喜八郎人形ギャラリー	listAddress:8F	listPhone:0334631142	closed:false	url:https://ja.foursquare.com/v/4fceed67e4b0ad8ae22ade82	name:川本喜八郎人形ギャラリー	zip:1510061	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 8F	phone:0334631142
 listName:渋谷区区民サービスセンター	listAddress:8F	listPhone:0337970935	closed:false	url:https://ja.foursquare.com/v/4fd8382de4b0bd3fc807cd2e	name:渋谷区 区民サービスセンター	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 8F	phone:0337970935
