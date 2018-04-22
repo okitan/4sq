@@ -73,9 +73,10 @@ class FoursquareVenuesCLI < Thor
   desc "view VENUE_NAME", "view venue list manged"
   option :crossStreet
 
-  option :closed,    type: :boolean, default: false
-  option :has_venue, type: :boolean, default: false
-  option :no_venue,  type: :boolean, default: false
+  option :closed,      type: :boolean, default: false
+  option :has_venue,   type: :boolean, default: false
+  option :no_venue,    type: :boolean, default: false
+  option :to_be_fixed, type: :boolean, default: false
 
   option :search, desc: "only available with --no-venue", type: :boolean, default: false
 
@@ -87,6 +88,18 @@ class FoursquareVenuesCLI < Thor
     venues.select! {|v| !v[:closed] } if options[:closed]
     venues.select! {|v| v[:url] }     if options[:has_venue]
     venues.select! {|v| !v[:url] }    if options[:no_venue]
+    if options[:to_be_fixed]
+      id = get_venue_id(name)
+      parent_venue = client.venue(id)
+
+      venues.select! do |v|
+        v[:url] &&
+          (
+            #(v[:listAddress] && ("#{parent_venue.name} #{v[:listAddress]}" != v[:crossStreet])) ||
+            (v[:listPhone]   && (v[:listPhone] != v[:phone]))
+          )
+      end
+    end
 
     fields = %i[ listName listAddress listPhone ] + options[:fields] + %i[ closed ]
     if options[:no_venue] && options[:search]
