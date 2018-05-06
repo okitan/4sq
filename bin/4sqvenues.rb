@@ -189,9 +189,13 @@ class FoursquareVenuesCLI < Thor
   end
 
   desc "search VENUE_NAME", "search unlisted sub venues of venue"
+  option :parent,   desc: "parent venue name (resolve its id from config)"
+
   display_options(default_fields: %i[ name url zip state city address crossStreet phone ])
   def search(name)
-    id = get_venue_id(name)
+    parent_name = options[:parent] || name
+
+    id = get_venue_id(parent_name)
     parent_venue = client.venue(id)
 
     venues = client.search_venues(
@@ -202,7 +206,7 @@ class FoursquareVenuesCLI < Thor
       radius: 1_000,
     )["venues"]
 
-    parent_ids =  [ id, *get_venue_children(name) ]
+    parent_ids =  [ id, *get_venue_children(parent_name) ]
     no_parent_venues = venues.map {|v| client.venue(v.id) }.select do |v|
       !parent_ids.include?(v.parent&.id) && !parent_ids.include?(v.id)
     end
