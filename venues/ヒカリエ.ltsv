@@ -34,7 +34,7 @@ listName:インフォメーション	listAddress:2F	listPhone:	closed:false	url:
 listName:シーバイクロエ	listAddress:2F	listPhone:0337971521	closed:false	url:https://ja.foursquare.com/v/4fbf039fe4b054971ef1627c	name:SEE BY CHLOE 渋谷ShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:2F	phone:
 listName:ジェラート　ピケ	listAddress:2F	listPhone:0364341522	closed:false	url:https://ja.foursquare.com/v/4f9927eee4b0b41ef343f61f	name:gelato pique	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:渋谷ヒカリエ ShinQs 2F	phone:0364341522
 listName:マーク ジェイコブス	listAddress:2F	listPhone:0364341719	closed:false	url:https://ja.foursquare.com/v/4fbf056de4b0ccc91e18a4af	name:Marc Jacobs	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 2F	phone:0364341719
-listName:ミミミ	listAddress:2F	listPhone:0364341720	closed:false	url:
+listName:ミミミ	listAddress:2F	listPhone:0364341720	closed:false	url:https://ja.foursquare.com/v/51fd7d467dd2fa115c621e58	name:mimimi 渋谷ヒカリエ店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 2F	phone:0364341720
 listName:ラフィネ	listAddress:2F	listPhone:0364341709	closed:false	url:https://ja.foursquare.com/v/51b95731498eed60d1c9ce0c	name:ラフィネ 渋谷ヒカリエShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 2F	phone:0364341709
 listName:ロクシタン	listAddress:2F	listPhone:0364341716	closed:false	url:https://ja.foursquare.com/v/4fc98fa1e4b0d9ec0d62f415	name:L'OCCITANE	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 2F	phone:0364341716
 listName:三代目 徳兵衛	listAddress:2F	listPhone:0364341603	closed:false	url:https://ja.foursquare.com/v/580b195438fa6db8769bba5a	name:三代目徳兵衛 渋谷ヒカリエ店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 2F デリ	phone:0364341603
@@ -165,7 +165,7 @@ listName:クレ・ド・ポー ボーテ	listAddress:B1F	listPhone:	closed:false
 listName:ケサランパサラン	listAddress:B1F	listPhone:0364341781	closed:false	url:https://ja.foursquare.com/v/57ca64a9498edb271dd56120	name:ケサランパサラン 渋谷ヒカリエShinQs	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B1F	phone:0364341781
 listName:コスメデコルテ	listAddress:B1F	listPhone:0364341793	closed:false	url:https://ja.foursquare.com/v/586a0b4c81907964280083b9	name:DECORTE 渋谷ヒカリエShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:
 listName:スターバックス コーヒー	listAddress:B1F	listPhone:0364341762	closed:false	url:https://ja.foursquare.com/v/5a1e678ab9a5a8519d2eba6f	name:Starbucks Coffee	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B1F	phone:0364341762
-listName:ドゥ・ラ・メール	listAddress:B1F	listPhone:0334862374	closed:false	url:
+listName:ドゥ・ラ・メール	listAddress:B1F	listPhone:0334862374	closed:false	url:https://ja.foursquare.com/v/53b6b105498eb33cef8ed878	name:COVERMARK (カバーマーク) 渋谷ヒカリエ ShinQs	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:0364341790
 listName:ネイルバー スマートスタイル	listAddress:B1F	listPhone:0364341780	closed:false	url:https://ja.foursquare.com/v/55c57773498e6be95095cd34	name:NailBar smart style 渋谷ヒカリエShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:0364341780
 listName:ベアミネラル	listAddress:B1F	listPhone:0364341771	closed:false	url:https://ja.foursquare.com/v/53620f33498ec55581fd09f0	name:ベアミネラル	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:
 listName:ベキュア	listAddress:B1F	listPhone:0364341779	closed:false	url:
@@ -189,7 +189,7 @@ listName:グラニースミス［3月8日（木）オープン］	listAddress:B2
 listName:セバスチャン・ブイエ	listAddress:B2F	listPhone:0364341677	closed:false	url:https://ja.foursquare.com/v/5893220301f433742eb02bdf	name:セバスチャン・ブイエ(渋谷ヒカリエ店)	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B2F	phone:
 listName:チーズガーデン	listAddress:B2F	listPhone:0364341816	closed:false	url:
 listName:チーズ・オン ザ テーブル	listAddress:B2F	listPhone:0364341696	closed:false	url:https://ja.foursquare.com/v/598d5baa2955134db1a57259	name:Cheese on the table	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:0364341696
-listName:ドルチェフェリーチェ レガロ	listAddress:B2F	listPhone:0364341664	closed:false	url:https://ja.foursquare.com/v/5a5072603b83070ec077e4f4	name:ドルチェフェリーチェ 渋谷ヒカリエShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B2F	phone:0364341664
+listName:ドルチェフェリーチェ レガロ	listAddress:B2F	listPhone:0364341664	closed:false	url:https://ja.foursquare.com/v/5a5072603b83070ec077e4f4	name:dolce felice 渋谷ヒカリエ店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B2F	phone:0364341664
 listName:ネモ・ベーカリー	listAddress:B2F	listPhone:0364341638	closed:false	url:https://ja.foursquare.com/v/57e0af5a498e846a3cd3da02	name:ネモ・ベーカリー	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B2F	phone:0364341638
 listName:パティスリー・サダハル・アオキ・パリ	listAddress:B2F	listPhone:0364341809	closed:false	url:https://ja.foursquare.com/v/4f992a4ae4b037b5696692fa	name:pâtisserie Sadaharu AOKI paris	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:0364341809
 listName:ピエール マルコリーニ	listAddress:B2F	listPhone:0364341895	closed:false	url:https://ja.foursquare.com/v/52ef0c0711d2d3462c865c66	name:Pierre Marcolini	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:0364341895

@@ -188,6 +188,28 @@ class FoursquareVenuesCLI < Thor
     format(lists + unknown, fields, options[:format])
   end
 
+  desc "search VENUE_NAME", "search unlisted sub venues of venue"
+  display_options(default_fields: %i[ name url zip state city address crossStreet phone ])
+  def search(name)
+    id = get_venue_id(name)
+    parent_venue = client.venue(id)
+
+    venues = client.search_venues(
+      query:  name,
+      near:   "#{parent_venue["location"]["lat"]},#{parent_venue["location"]["lng"]}",
+      intent: "browse",
+      limit:  50,
+      radius: 1_000,
+    )["venues"]
+
+    parent_ids =  [ id, *get_venue_children(name) ]
+    no_parent_venues = venues.map {|v| client.venue(v.id) }.select do |v|
+      !parent_ids.include?(v.parent&.id) && !parent_ids.include?(v.id)
+    end
+
+    format(no_parent_venues.map {|v| compact_venue(v, options[:fields]) }, options[:fields], options[:format])
+  end
+
   protected
   def config
     @config ||= YAML.load_file("./config/venues.yaml")
