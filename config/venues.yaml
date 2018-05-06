@@ -40,6 +40,7 @@
   subvenues:
     - 4f7f9ceae4b023c637e055ec
     - 4fa8cfe1e4b01db6889d52e1
+    - 51722ef0e4b0cf8b85598a20
   templates:
   - items: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
     shops:
