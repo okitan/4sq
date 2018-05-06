@@ -8,7 +8,7 @@ listName:COMPTOIR DES COTONNIERS	listAddress:1F	listPhone:	closed:false	url:
 listName:Chocott Milk Bar	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54cc7300498e049f010e22ce	name:chocott milk bar	zip:	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:Cosme Kitchen	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54c9a53f498eb259fe38fa9c	name:Cosme Kitchen	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:DIMJOY	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5470398e498efd572e030041	name:DIM JOY	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0449820661
-listName:Deluxe＆chouette gallery	listAddress:1F	listPhone:	closed:false	url:
+listName:Deluxe＆chouette gallery	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5703993c498e3507df3fbf58
 listName:HAND BAKES	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/546824c4498e40bd82eac242	name:ハンドベイクス	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0444119019
 listName:HONOLULU COFFEE	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54770fc6498e625c55b9e5d2	name:Honolulu Coffee	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0444112447
 listName:Loungedress	listAddress:1F	listPhone:	closed:false	url:
@@ -24,11 +24,12 @@ listName:The 3rd Kitchen	listAddress:1F	listPhone:	closed:false	url:https://ja.f
 listName:URBAN RESEARCH ROSSO	listAddress:1F	listPhone:	closed:false	url:
 listName:URBAN RESEARCH Sonny Label	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/549e8a69498e3242ba4c5b80	name:URBAN RESEARCH Sonny Label	zip:2110004	state:神奈川県	city:中原区	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0449823131
 listName:V2&M by Fruits Bar AOKI	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/553c9d2d498e4eca6575ca4d	name:V2&M	zip:	state:	city:	address:	crossStreet:	phone:
+listName:YECCA VECCA	listAddress:1F	listPhone:	closed:false	url:
 listName:allureville	listAddress:1F	listPhone:	closed:false	url:
 listName:chambre de charme iki	listAddress:1F	listPhone:	closed:false	url:
 listName:everyday by collex	listAddress:1F	listPhone:	closed:false	url:
 listName:つけ麺や 武双	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/58a430a8abc6d66a250aa1f5	name:つけ麺や 武双	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉1F	phone:0449488780
-listName:やわらかシロコッペ	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5a83bd2ea9e4027bb9ad079d	name:コメダ謹製「やわらかシロコッペ」 グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市中原区	address:新丸子東 3 丁目 1135-1	crossStreet:	phone:
+listName:やわらかシロコッペ	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5a83bd2ea9e4027bb9ad079d	name:やわらかシロコッペ	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0448638488
 listName:らんまん食堂	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54915e81498e98cd5c3b99c5	name:らんまん食堂	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0449823191
 listName:イトーヨーカドーグランツリー武蔵小杉店	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/547c3695498ef6bf85fd85ad	name:イトーヨーカドー	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉	phone:0444223111
 listName:エクレール・ド・リーブ	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54717511498e2e61fb3a6d31	name:エクレール・ド・リーブ	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:0444330608
@@ -104,7 +105,7 @@ listName:AMERICAN HOLIC	listAddress:3F	listPhone:	closed:false	url:
 listName:B-DESIGN	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5a165e07a795bd0b4f7f2d14	name:じぶんまくら	zip:2110004	state:神奈川県	city:川崎市	address:	crossStreet:グランツリー武蔵小杉 3F	phone:0449821741
 listName:CIAOPANIC TYPY	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/55dd49a3498ebf9d43ae85bd	name:CIAOPANIC TYPY グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:Franc franc	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/595751ea029a55239db62f30	name:Francfranc	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:0444313630
-listName:JTB	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/548d0620498ed35b873264d6	name:JTB SHOP JTB首都圏 グランツリー武蔵小杉店	zip:	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
+listName:JTB	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/548d0620498ed35b873264d6	name:JTB グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:0444311770
 listName:KANEKO OPTICAL 金子眼鏡	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/593bb330123a196a3f95668d	name:Kaneko Optical 金子眼鏡 グランツリー武蔵小杉	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:ORIHICA	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5a13cb2da795bd13ff6da032	name:ORIHICA	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:0444319888
 listName:Puretre	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5718ac87498e836b4779edd9	name:puretre	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
