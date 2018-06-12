@@ -152,7 +152,7 @@ listName:HACCI（ハッチ）	listAddress:B1F	listPhone:0364341768	closed:false	
 listName:KOBAKO（コバコ）	listAddress:B1F	listPhone:0364341765	closed:false	url:https://ja.foursquare.com/v/501a28cfe4b0a9a3f5722762	name:KOBAKO	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:
 listName:RMK（アールエムケー）	listAddress:B1F	listPhone:0364341787	closed:false	url:https://ja.foursquare.com/v/58ce17d5995842498ebce5d8	name:RMK 渋谷ヒカリエシンクス店	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:B1F	phone:0364341787
 listName:SHISEIDO	listAddress:B1F	listPhone:0334868285	closed:false	url:https://ja.foursquare.com/v/53049cf4498ebbca93e59c8d	name:資生堂 ShinQs	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:B1	phone:
-listName:SLEEPY SLEEPY	listAddress:B1F	listPhone:0364341863	closed:false	url:
+listName:SLEEPY SLEEPY	listAddress:B1F	listPhone:0364341863	closed:false	url:https://ja.foursquare.com/v/5b10e3c02db4a9002c0b34be        name:sleepy sleepy      zip:1500002     state:東京都    city:渋谷区     address:B1      crossStreet:    phone:
 listName:THREE （スリー）	listAddress:B1F	listPhone:0364341770	closed:false	url:https://ja.foursquare.com/v/5412c848498e157a7bad6136	name:THREE	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B1F	phone:0364341770
 listName:fini（フィニ）	listAddress:B1F	listPhone:0364341783	closed:false	url:https://ja.foursquare.com/v/5657eea7498e846ddc74d9df	name:Fini Salon	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B1F	phone:
 listName:shiro	listAddress:B1F	listPhone:0364341796	closed:false	url:
@@ -232,7 +232,7 @@ listName:タミルスパイス	listAddress:B3F	listPhone:0364341864	closed:false
 listName:ナチュラルマーケットサービスカウンター	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/513da676e4b090bbbeb9b743	name:ShinQs ナチュラルマーケット	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:
 listName:ピッコロ ジオ	listAddress:B3F	listPhone:0364341879	closed:false	url:https://ja.foursquare.com/v/50ab0409e4b02068ec214a69	name:Piccolo Gio	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:0364341908
 listName:フルッタフルッタ・アサイーカフェ	listAddress:B3F	listPhone:0364341875	closed:false	url:https://ja.foursquare.com/v/5003b9ece4b01f40cef37562	name:ACAI CAFE by FRUTA FRUTA	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-2-1	crossStreet:渋谷ヒカリエShinQs B3F	phone:0364341875
-listName:ボニー・ダヴリール	listAddress:B3F	listPhone:0364341687	closed:false	url:
+listName:ボニー・ダヴリール	listAddress:B3F	listPhone:0364341687	closed:false	url:https://ja.foursquare.com/v/5b1771adc0f163002cc1786c        name:ボニー ダヴリール  zip:1500002     state:東京都    city:渋谷区     address:        crossStreet:渋谷ヒカリエ B3F    phone:
 listName:マンゴーツリーキッチン	listAddress:B3F	listPhone:0364341876	closed:false	url:https://ja.foursquare.com/v/4f1a6478e4b0817d3b9f431e	name:mango tree kitchen	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:0364341876
 listName:九州屋	listAddress:B3F	listPhone:0364341884	closed:false	url:https://ja.foursquare.com/v/501e407fe4b0f36f046b4192	name:九州屋+大地を守る会 渋谷ヒカリエ	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B3F	phone:0364341884
 listName:加賀麩不室屋	listAddress:B3F	listPhone:0364341820	closed:false	url:https://ja.foursquare.com/v/4fd81b29e4b0de27c8bd91c7	name:加賀麩 不室屋	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:0364341820
