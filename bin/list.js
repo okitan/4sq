@@ -84,6 +84,7 @@ const getShops = async (page, { url, selector, attributes }) => {
 
             value = (await (await (await shop.$(propertySelector)).getProperty(property)).jsonValue())
               .trim()
+              .replace(/\n/, '')
               .replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
                 // https://qiita.com/yamikoo@github/items/5dbcc77b267a549bdbae
                 return String.fromCharCode(s.charCodeAt(0) - 0xfee0);
