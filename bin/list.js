@@ -50,7 +50,10 @@ const getShopsWithTemplate = async (page, { items, shops: shopTemplate }) => {
     for (const attribute of ['listName', 'listAddress', 'listPhone']) {
       if (attribute in shopTemplate.attributes) {
         if (typeof shopTemplate.attributes[attribute] === 'string') {
-          shopConfig.attributes[attribute] = render(shopTemplate.attributes[attribute], { item: item });
+          shopConfig.attributes[attribute] = render(shopTemplate.attributes[attribute], {
+            item: item,
+            upcasedItem: item.toString().replace('b', 'B'),
+          });
         } else {
           shopConfig.attributes[attribute] = shopTemplate.attributes[attribute];
         }
@@ -63,9 +66,11 @@ const getShopsWithTemplate = async (page, { items, shops: shopTemplate }) => {
 };
 
 const getShops = async (page, { url, selector, attributes }) => {
+  console.log(url);
   await page.goto(url, { timeout: 300 * 1000 }); //グランツリー武蔵小杉 is too slow
 
   const shops = await page.$$(selector);
+  console.log(shops.length);
 
   return Promise.all(
     shops.map(async shop => {

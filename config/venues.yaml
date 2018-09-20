@@ -42,7 +42,15 @@
     - 4fa8cfe1e4b01db6889d52e1
     - 51722ef0e4b0cf8b85598a20
   templates:
-  - items: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
+  - items: [ 1, 2, 3, 4, 5 ]
+    shops:
+      url: "https://www.tokyu-dept.co.jp/shinqs/floor/{{item}}f.html"
+      selector: "ul.shopList li"
+      attributes:
+        listName:
+          propertySelector: "a"
+        listAddress: "{{item}}F"
+  - items: [ 6, 7, 8, 9, 11 ]
     shops:
       url: "http://www.hikarie.jp/floormap/{{item}}F.html"
       selector: "#floorshop .shopbox"
@@ -52,13 +60,11 @@
         listAddress: "{{item}}F"
         listPhone:
           propertySelector: ".shop_info_m dd:nth-of-type(2), .shop_info_67_r dl:nth-of-type(3) dd"
-  - items: [ B3, B2, B1 ]
+  - items: [ b3, b2, b1 ]
     shops:
-      url: "http://www.hikarie.jp/floormap/{{item}}.html"
-      selector: "#floorshop .shopbox"
+      url: "https://www.tokyu-dept.co.jp/shinqs/floor/{{item}}.html"
+      selector: "ul.shopList li"
       attributes:
         listName:
-          propertySelector: ".shoplogo"
-        listAddress: "{{item}}F"
-        listPhone:
-          propertySelector: ".shop_info_m dd:nth-of-type(2), .shop_info_67_r dl:nth-of-type(3) dd"
+          propertySelector: "a"
+        listAddress: "{{upcasedItem}}F"
