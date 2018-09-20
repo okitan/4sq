@@ -61,7 +61,7 @@ listName:ビーファビュラス	listAddress:3F	listPhone:	closed:false	url:
 listName:ユナイテッドアローズ	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f9d0b3de4b008dde232d610	name:UNITED ARROWS	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 3F	phone:
 listName:金子眼鏡店	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5972ccd34c9be6633d7251c1	name:金子眼鏡店	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 3F	phone:
 listName:45R	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/50c071dde4b02604f103df1b	name:45R	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
-listName:AIRONA by mu-ra（アイロナ バイ ムーラ）	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b8d2419838e59002c2ae087
+listName:AIRONA by mu-ra（アイロナ バイ ムーラ）	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b8d2419838e59002c2ae087	name:AIRONA by mu-ra	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
 listName:Ane Mone（アネモネ）	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f8f65cfe4b081406157c749	name:Ane Mone	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
 listName:A＆Fカントリー（エイアンドエフカントリー）	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f989ea9e4b06b674a70357f	name:A&Fカントリー	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
 listName:ECCO（エコー）	listAddress:4F	listPhone:	closed:false	url:
@@ -79,7 +79,7 @@ listName:ザ・ノース・フェイス	listAddress:4F	listPhone:	closed:false	u
 listName:スピック＆スパン	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/526665a211d2a236fdeb88cf	name:Spick & Span	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 4F	phone:
 listName:ソフィット	listAddress:4F	listPhone:	closed:false	url:
 listName:ダンスキン ビューティフル シングス	listAddress:4F	listPhone:	closed:false	url:
-listName:チックタック	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b25fee96a5950002c9e7608
+listName:チックタック	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b25fee96a5950002c9e7608	name:TiC TAC	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
 listName:トゥデイズ スペシャル	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f9fb3d9e4b0743303c7574b	name:TODAY'S SPECIAL	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 4F	phone:
 listName:トラベルショップ ミレスト	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4fa9f396e4b0aecc8290ac29	name:TRAVEL SHOP MILESTO	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 4F	phone:
 listName:ハーブス	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f8c1eb7a17c515434dfe94f	name:HARBS	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21	crossStreet:渋谷ヒカリエ ShinQs 4F	phone:
@@ -93,15 +93,15 @@ listName:P2 DOG＆CAT（ピーツー ドッグアンドキャット）	listAddre
 listName:TENERITA（テネリータ）	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/57763bea498ebddf8a466765	name:テネリータ 渋谷ヒカリエ ShinQs店	zip:1500002	state:東京都	city:渋谷区	address:渋谷2丁目21番1号	crossStreet:渋谷ヒカリエ ShinQs5F	phone:
 listName:U.Q	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4fa8bd0fe4b0ad11dead5144	name:U.Q 渋谷店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 5F	phone:
 listName:まかないこすめ［9月14日（金）ニューオープン］	listAddress:5F	listPhone:	closed:false	url:
-listName:アイウエオ	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5afbf6a6b23dfa002c501405
+listName:アイウエオ	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5afbf6a6b23dfa002c501405	name:AIUEO	zip:1500002	state:東京都	city:渋谷区	address:	crossStreet:5F	phone:
 listName:オブジェクツ バイ // ソー メニー イヤーズ //	listAddress:5F	listPhone:	closed:false	url:
-listName:ギビング ストア	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5afbf64fd8096e002c0bee56
+listName:ギビング ストア	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5afbf64fd8096e002c0bee56	name:Giving Store	zip:1500002	state:東京都	city:渋谷区	address:渋谷 2-21-1	crossStreet:渋谷ヒカリエShinQs 5F	phone:
 listName:コレックス	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f98f66de4b08ffa216ac65e	name:everyday by collex	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-2	crossStreet:渋谷ヒカリエ ShinQs 5F	phone:
 listName:ザワリィー［9月6日（木）ニューオープン］	listAddress:5F	listPhone:	closed:false	url:
 listName:ザ・コンランショップ キッチン	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f964837e4b08e75f2c6bbea	name:ザ・コンランショップ キッチン 渋谷店	zip:1508509	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 5F	phone:
 listName:ザ･マーケットプレイス	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4febebc9e4b095ea888df3a5	name:the market place SinQs店	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ 5F	phone:
 listName:タピエスタイル	listAddress:5F	listPhone:	closed:false	url:
-listName:ハニーロア	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b33497d974617003912e04c
+listName:ハニーロア	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b33497d974617003912e04c	name:HONEYROA	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 5F	phone:
 listName:バースデイ・バー	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4febe12be4b0bda56bca7315	name:BIRTHDAY BAR	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs 5F	phone:
 listName:ル・クルーゼ	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54fd4fe9498ef41b01962e2b	name:ル・クルーゼ 渋谷ヒカリエ シンクス店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 5F	phone:
 listName:久世福商店	listAddress:5F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5624a43b498eccd9fcfe9eab	name:久世福商店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs 5F	phone:
@@ -176,7 +176,7 @@ listName:Pâtisserie & Café DEL'IMMO	listAddress:B2F	listPhone:	closed:false	ur
 listName:WA・BI・SA（ワビサ）	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5030aa2ce4b0f9a2ddf3a9c8	name:WA・BI・SA	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
 listName:がんこ職人	listAddress:B2F	listPhone:	closed:false	url:
 listName:クロスロードベーカリー	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5aa6722479f6c75d6ea01b61	name:CROSSROAD BAKERY	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs B2F	phone:
-listName:グラニースミス	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b1e4a4de96d0c002ce268df
+listName:グラニースミス	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b1e4a4de96d0c002ce268df	name:Granny Smith	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
 listName:コールドストーン クリーマリー サンド［9月14日（金）ニューオープン］	listAddress:B2F	listPhone:	closed:false	url:
 listName:セバスチャン・ブイエ	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5893220301f433742eb02bdf	name:セバスチャン・ブイエ	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B2F	phone:
 listName:チーズガーデン	listAddress:B2F	listPhone:	closed:false	url:
@@ -190,7 +190,7 @@ listName:ファーイーストバザール	listAddress:B2F	listPhone:	closed:fal
 listName:フェーヴ	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4fd9dc69be7770a3cd03425e	name:fève	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
 listName:フード ジュエリー	listAddress:B2F	listPhone:	closed:false	url:
 listName:フードステージB2	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/51a95eea498e2da613b42841	name:フードステージB2	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
-listName:ベリーデコ	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/504b0815e4b04421f2977d60
+listName:ベリーデコ	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/504b0815e4b04421f2977d60	name:Berry DECO	zip:	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
 listName:ベルン	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f9fc733e4b0dc03c6d6faf4	name:ベルン 渋谷ヒカリエ ShinQs店	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs B2F	phone:
 listName:ベーグルアンドベーグル マイ ヘルシーライフ	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/57ecf16d498e77c0a3c4f0ac	name:BAGEL & BAGEL my healthy life	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエShinQs B2F	phone:
 listName:マリアージュ フレール	listAddress:B2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/4f98ca64e4b0519ab9e9a924	name:マリアージュ フレール	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B2F	phone:
@@ -216,7 +216,7 @@ listName:rinato DAIKANYAMA（リナト ダイカンヤマ）	listAddress:B3F	lis
 listName:zen eashion（ゼンイーション）	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/50d1a6f9e4b0da94337d5b90	name:zen eashion	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:
 listName:つけにく麹屋	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5838106d8cfe547612f44808	name:つけにく麹屋	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B3F	phone:
 listName:まつおか	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5370b5f4498e22fdbae30262	name:お惣菜のまつおか 渋谷ヒカリエ	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ B3F	phone:
-listName:ギフトカウンター／免税カウンター	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b8237d13ba767002cb05a11
+listName:ギフトカウンター／免税カウンター	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b8237d13ba767002cb05a11	name:ShinQs Tax Refund	zip:1500002	state:東京都	city:渋谷区	address:	crossStreet:	phone:
 listName:ピッコロ ジオ	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/50ab0409e4b02068ec214a69	name:Piccolo Gio	zip:1500002	state:東京都	city:渋谷区	address:渋谷2-21-1	crossStreet:渋谷ヒカリエ ShinQs B3F	phone:
 listName:フルッタフルッタ・アサイーカフェ	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5003b9ece4b01f40cef37562	name:ACAI CAFE by FRUTA FRUTA	zip:1508510	state:東京都	city:渋谷区	address:渋谷2-2-1	crossStreet:渋谷ヒカリエShinQs B3F	phone:
 listName:ボニー・ダヴリール	listAddress:B3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b1771adc0f163002cc1786c	name:ボニー ダヴリール	zip:1500002	state:東京都	city:渋谷区	address:	crossStreet:渋谷ヒカリエ B3F	phone:
