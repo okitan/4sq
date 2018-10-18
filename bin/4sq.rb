@@ -102,13 +102,18 @@ class FoursquareCLI < Thor
     end
   end
 
+  desc "over *VENUE_ID", "event venues are over"
+  def over(*venues)
+    venues.each do |id|
+      p client.flag_venue(id, problem: "event_over")
+    end
+  end
+
   # https://developer.foursquare.com/docs/api/venues/flag
-  desc "delete *VENUE_ID", "delete venues"
-  option :reason, desc: "reason of delete", default: "doesnt_exist",
-                  enum: %w[ mislocated closed duplicate inappropriate doesnt_exist event_over ]
+  desc "delete *VENUE_ID", "delete venues (completely deleted)"
   def delete(*venues)
     venues.each do |id|
-      p client.flag_venue(id, problem: options[:reason])
+      p client.flag_venue(id, problem: "doesnt_exist")
     end
   end
 
