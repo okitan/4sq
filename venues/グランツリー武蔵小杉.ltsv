@@ -9,7 +9,6 @@ listName:Cosme Kitchen	listAddress:1F	listPhone:	closed:false	url:https://ja.fou
 listName:DIMJOY	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5470398e498efd572e030041	name:DIM JOY	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:HAND BAKES	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/546824c4498e40bd82eac242	name:ハンドベイクス	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:HONOLULU COFFEE	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54770fc6498e625c55b9e5d2	name:Honolulu Coffee	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
-listName:Loungedress	listAddress:1F	listPhone:	closed:false	url:
 listName:NIMES Relaxation	listAddress:1F	listPhone:	closed:false	url:
 listName:PATISSERIE SUSUCRIER	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54a79bdf498e51ca1da3232c	name:Patisserie SUSUCRIER	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉1F	phone:
 listName:PHONAM	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5470641c498e0e46bdd495c5	name:Pho Nam	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
@@ -47,7 +46,7 @@ listName:石臼挽きそば　石月	listAddress:1F	listPhone:	closed:false	url:
 listName:神戸六甲道 ぎゅんた	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5479a5fb498e0c555a7e3cad	name:神戸六甲道 ぎゅんた	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:自然食品F&F marche	listAddress:1F	listPhone:	closed:false	url:
 listName:菓匠　寛永堂	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/56bc26d038fa2decc1e0d155	name:寛永堂 グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
-listName:青山フラワーマーケット	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/566b79a5498edbe085b4f068	name:Aoyana Flower Market グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
+listName:青山フラワーマーケット	listAddress:1F	listPhone:	closed:false	url:https://ja.foursquare.com/v/566b79a5498edbe085b4f068	name:青山フラワーマーケット	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 1F	phone:
 listName:&.NOSTALGIA	listAddress:2F	listPhone:	closed:false	url:
 listName:ALBION DRESSER	listAddress:2F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54700f96498e5bf0184cdf82	name:albion dresser	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 2F	phone:
 listName:ATRENA	listAddress:2F	listPhone:	closed:false	url:
@@ -127,8 +126,9 @@ listName:タワーレコード	listAddress:3F	listPhone:	closed:false	url:https:
 listName:ハートアップ	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/579dade1498e9ffc607ae0ed	name:ハートアップコンタクト 武蔵小杉グランツリー店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:ミズノショップ 武蔵小杉	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b1ba228b8fd9d0039e9a91e	name:ミズノショップ武蔵小杉	zip:2110004	state:神奈川県	city:川崎市中原区	address:	crossStreet:	phone:
 listName:ロフト	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54759d0f498e0910b558e636	name:武蔵小杉ロフト	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
+listName:椿屋カフェ	listAddress:3F	listPhone:	closed:false	url:
 listName:楽天モバイル/SmaPla	listAddress:3F	listPhone:	closed:false	url:
-listName:生活の木	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54730fb3498ec971bfe916e9	name:生活の木 グランツリー武蔵小杉	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
+listName:生活の木	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54730fb3498ec971bfe916e9	name:生活の木	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:白ヤギ珈琲店	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/546ee73a498e4b05245b5c40	name:白ヤギ珈琲店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:紀伊國屋書店	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/546f0191498eb9d24473b87c	name:紀伊國屋書店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 3F	phone:
 listName:銀座山野楽器／ヤマノミュージックサロン	listAddress:3F	listPhone:	closed:false	url:https://ja.foursquare.com/v/55209264498e84ea41e5f7ad	name:ヤマノミュージックサロン武蔵小杉	zip:	state:	city:	address:	crossStreet:グランツリー武蔵小杉 3F	phone:
@@ -141,7 +141,8 @@ listName:Lovetoxic	listAddress:4F	listPhone:	closed:false	url:https://ja.foursqu
 listName:MARKEY'S	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5551a588498eb16983d51612	name:MARKEY'S グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
 listName:My Gym	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/546ed1fe498e44efc05774eb	name:My Gym 武蔵小杉校	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
 listName:PARTS CLUB	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/5b55b479916bc1002cb7dbd3	name:parts  club パーツクラブ 武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市中原区	address:	crossStreet:グランツリー	phone:
-listName:Rainbow SPECTRUM	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/547437f5498ec6c19954e61f	name:Rainbow SPECTRUM 武蔵小杉	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
+listName:Rainbow SPECTRUM	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/547437f5498ec6c19954e61f	name:Rainbow SPECTRUM	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
+listName:WELLWHOLE	listAddress:4F	listPhone:	closed:false	url:
 listName:With.11cut	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/54940017498ed7d33f1356fe	name:With.11cut グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
 listName:apres les cours	listAddress:4F	listPhone:	closed:false	url:
 listName:petit main	listAddress:4F	listPhone:	closed:false	url:https://ja.foursquare.com/v/573bd280498ebba40480d441	name:petit main グランツリー武蔵小杉店	zip:2110004	state:神奈川県	city:川崎市	address:中原区新丸子東3-1135-1	crossStreet:グランツリー武蔵小杉 4F	phone:
